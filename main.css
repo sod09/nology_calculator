@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  color: #f4f4f4;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.calculator_grid {
+  padding-top: 50px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  display: grid;
+  grid-template-areas: "display display display display" "clear clear clear divide" "seven eight nine multiply" "four five six minus" "one two three plus" "zero zero spot equals";
+}
+.calculator_grid button {
+  text-align: center;
+  font-size: 50px;
+  padding: 30px 30px;
+  border-radius: 8px;
+}
+.calculator_grid #display {
+  grid-area: display;
+  background-color: grey;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 80px;
+  text-align: right;
+  padding: 30px 30px;
+}
+.calculator_grid #clear {
+  grid-area: clear;
+}
+.calculator_grid #divide {
+  grid-area: divide;
+}
+.calculator_grid #seven {
+  grid-area: seven;
+}
+.calculator_grid #eight {
+  grid-area: eight;
+}
+.calculator_grid #nine {
+  grid-area: nine;
+}
+.calculator_grid #multiply {
+  grid-area: multiply;
+}
+.calculator_grid #four {
+  grid-area: four;
+}
+.calculator_grid #five {
+  grid-area: five;
+}
+.calculator_grid #six {
+  grid-area: six;
+}
+.calculator_grid #minus {
+  grid-area: minus;
+}
+.calculator_grid #one {
+  grid-area: one;
+}
+.calculator_grid #two {
+  grid-area: two;
+}
+.calculator_grid #three {
+  grid-area: three;
+}
+.calculator_grid #plus {
+  grid-area: plus;
+}
+.calculator_grid #zero {
+  grid-area: zero;
+}
+.calculator_grid #spot {
+  grid-area: spot;
+}
+.calculator_grid #equals {
+  grid-area: equals;
+}
+
+body {
+  background-color: pink;
+  max-width: 100%;
+}

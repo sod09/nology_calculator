@@ -1,0 +1,91 @@
+header {
+  color: $font_color;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.calculator_grid {
+  padding-top: 50px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  display: grid;
+  grid-template-areas:
+    "display display display display"
+    "clear clear clear divide"
+    "seven eight nine multiply"
+    "four five six minus"
+    "one two three plus"
+    "zero zero spot equals";
+
+  button {
+    text-align: center;
+    font-size: 50px;
+    padding: 30px 30px;
+    border-radius: 8px;
+  }
+
+  #display {
+    grid-area: display;
+    background-color: grey;
+    font-family: $font_display;
+    font-size: 80px;
+    text-align: right;
+    padding: 30px 30px;
+  }
+
+  #clear {
+    grid-area: clear;
+  }
+
+  #divide {
+    grid-area: divide;
+  }
+  #seven {
+    grid-area: seven;
+  }
+  #eight {
+    grid-area: eight;
+  }
+  #nine {
+    grid-area: nine;
+  }
+  #multiply {
+    grid-area: multiply;
+  }
+  #four {
+    grid-area: four;
+  }
+  #five {
+    grid-area: five;
+  }
+  #six {
+    grid-area: six;
+  }
+  #minus {
+    grid-area: minus;
+  }
+  #one {
+    grid-area: one;
+  }
+  #two {
+    grid-area: two;
+  }
+  #three {
+    grid-area: three;
+  }
+  #plus {
+    grid-area: plus;
+  }
+  #zero {
+    grid-area: zero;
+  }
+  #spot {
+    grid-area: spot;
+  }
+  #equals {
+    grid-area: equals;
+  }
+}
