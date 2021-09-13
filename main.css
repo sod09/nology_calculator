@@ -16,6 +16,7 @@ header {
 .calculator_grid {
   padding-top: 50px;
   height: 80vh;
+  width: 70vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,6 +28,9 @@ header {
   font-size: 50px;
   padding: 30px 30px;
   border-radius: 8px;
+}
+.calculator_grid button:hover {
+  background-color: hotpink;
 }
 .calculator_grid #display {
   grid-area: display;
