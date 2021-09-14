@@ -1,3 +1,5 @@
+
+
 header {
   color: $font_color;
   text-align: center;
@@ -7,12 +9,12 @@ header {
 .calculator_grid {
   padding-top: 50px;
   height: 80vh;
-  // max-width: 70px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
   grid-template-areas:
     "display display display display"
     "clear clear clear divide"
@@ -22,23 +24,36 @@ header {
     "zero zero spot equals";
 
   button {
+    background-color: #3D087B;
     text-align: center;
     font-size: 50px;
-    padding: 30px 30px;
-    border-radius: 8px;
+    padding: 20px 20px;
+    margin: 2px;
+    color: #F43B86;
+    border-radius: 15px;
+    border: solid black 10px;
   }
 
   button:hover {
-    background-color: hotpink;
+    background-color: #872BF1;
+  }
+
+  .calculator_opbutton {
+    color: #FFE459;
+  }
+
+  #equals, #clear { 
+    color: #FFE459;
   }
 
   #display {
     grid-area: display;
-    background-color: grey;
-    font-family: $font_display;
+    background-color:#872BF1;
+    color: black;
     font-size: 80px;
     text-align: right;
-    padding: 30px 30px;
+    padding: 20px 20px;
+    border: solid black 15px;
   }
 
   #clear {

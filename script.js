@@ -2,11 +2,12 @@
 
 // UI variables
 const opBtn = document.querySelectorAll(".calculator_opbutton");
-const numBtn = document.querySelectorAll(".calculator_numbutton");
+let numBtn = document.querySelectorAll(".calculator_numbutton");
 const calcDisplay = document.querySelector(".calculator_display");
 const clearBtn = document.querySelector("#clear");
 const equalsBtn = document.querySelector("#equals");
 const decimal = document.querySelector("#decimal");
+
 
 // outputs 
 
@@ -14,6 +15,7 @@ let firstClickNum;
 let secondClickNum;
 let equalsOutput;
 let operator;
+
 
 // display
 
@@ -27,14 +29,28 @@ numBtn.forEach(function (i) {
   });
 });
 
+// how do we get multiple numbers?
+
+
 opBtn.forEach(function (i) {
   i.addEventListener("click", function () {
-
     operator = i.innerHTML;
     firstClickNum = calcDisplay.innerHTML;
     calcDisplay.innerHTML = i.innerHTML;
   });
 });
+
+// decimal function 
+
+decimal.addEventListener("click", () => {
+  calcDisplay.innerHTML= ".";
+  if (!firstClickNum.includes(".")) {
+    firstClickNum += ".";
+    calcDisplay.innerHTML;
+  }
+  
+})
+
 
 
 
