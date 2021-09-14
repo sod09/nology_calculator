@@ -5,44 +5,57 @@ const opBtn = document.querySelectorAll(".calculator_opbutton");
 const numBtn = document.querySelectorAll(".calculator_numbutton");
 const calcDisplay = document.querySelector(".calculator_display");
 const clearBtn = document.querySelector("#clear");
+const equalsBtn = document.querySelector("#equals");
+const decimal = document.querySelector("#decimal");
 
-// gives undefined
+// outputs 
 
-// const numBtn = document
-//   .querySelectorAll(".calculator_numbutton")
-//   .forEach((item) => {
-//     item.addEventListener("click", (event) => {
-//       event.target.value;
-//       calcDisplay.innerHTML = numBtn;
-//       console.log(numBtn);
-//     });
-//   });
+let firstClickNum;
+let secondClickNum;
+let equalsOutput;
+let operator;
+
+// display
+
+clearBtn.addEventListener("click", () => {
+  calcDisplay.innerHTML = "0";
+});
 
 numBtn.forEach(function (i) {
   i.addEventListener("click", function () {
     calcDisplay.innerHTML = i.innerHTML;
-    console.log(i);
   });
 });
 
 opBtn.forEach(function (i) {
   i.addEventListener("click", function () {
+
+    operator = i.innerHTML;
+    firstClickNum = calcDisplay.innerHTML;
     calcDisplay.innerHTML = i.innerHTML;
   });
 });
 
-// gives object nodelist
-// const numBtn = document.querySelectorAll(".calculator_numbutton");
-// for (var i = 0; i < numBtn.length; i++) {
-//   numBtn[i].addEventListener("click", function () {
-//     event.target.value;
-//     calcDisplay.innerHTML = numBtn;
-//     console.log(numBtn);
-//   });
-// }
 
-// outputs
 
-clearBtn.addEventListener("click", () => {
-  calcDisplay.innerHTML = "0";
-});
+// calculator function 
+
+equalsBtn.addEventListener("click", calculator);
+
+function calculator() {
+  console.log(operator);
+  if (operator === "+") {
+    calcDisplay.innerHTML =
+    parseFloat(firstClickNum) + parseFloat(calcDisplay.innerHTML);
+  } else if (operator === "-") {
+    calcDisplay.innerHTML =
+    parseFloat(firstClickNum) - parseFloat(calcDisplay.innerHTML);
+  } else if (operator === "/") {
+    calcDisplay.innerHTML =
+    parseFloat(firstClickNum) / parseFloat(calcDisplay.innerHTML);
+  } else if (operator === "*") {
+    calcDisplay.innerHTML =
+    parseFloat(firstClickNum) * parseFloat(calcDisplay.innerHTML);
+  }
+}
+
