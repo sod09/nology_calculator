@@ -15,8 +15,9 @@ header {
 
 .calculator_grid {
   padding-top: 50px;
-  height: 80vh;
+  max-height: 100vh;
   display: flex;
+  background-image: linear-gradient(to right bottom, #3d087b, #4f1197, #6119b4, #7422d2, #872bf1);
   flex-direction: column;
   justify-content: center;
   display: grid;
@@ -32,6 +33,7 @@ header {
   color: #F43B86;
   border-radius: 15px;
   border: solid black 10px;
+  cursor: pointer;
 }
 .calculator_grid button:hover {
   background-color: #872BF1;
@@ -50,6 +52,7 @@ header {
   text-align: right;
   padding: 20px 20px;
   border: solid black 15px;
+  border-radius: 15px;
 }
 .calculator_grid #clear {
   grid-area: clear;
@@ -104,6 +107,7 @@ header {
 }
 
 body {
-  background-color: #11052C;
+  background-image: linear-gradient(to right bottom, #3d087b, #4f1197, #6119b4, #7422d2, #872bf1);
+  max-height: 100%;
   max-width: 100%;
 }
