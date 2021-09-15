@@ -12,10 +12,9 @@ const decimal = document.querySelector("#decimal");
 // outputs 
 
 let firstClickNum = "";
-let secondClickNum;
-let equalsOutput;
 let operator;
-let displayValue = "";
+let displayValue = ""; 
+
 
 
 // display
@@ -26,12 +25,16 @@ clearBtn.addEventListener("click", () => {
   displayValue = "";
 });
 
+// this resets firstClickNum & displayValue back to "" so that it ends the string
+
 numBtn.forEach(function (i) {
   i.addEventListener("click", function () {
     displayValue =  displayValue + i.innerHTML;
     calcDisplay.innerHTML = displayValue;
   });
 });
+
+// the display value here gives you the display value plus the numbers selected after 
 
 opBtn.forEach(function (i) {
   i.addEventListener("click", function () {
@@ -42,7 +45,7 @@ opBtn.forEach(function (i) {
   });
 });
 
-
+// display value resets back to "" when the operator button is clicked so that the numbers do not concatenate  
 
 
 // calculator function 
@@ -67,6 +70,8 @@ function calculator() {
   }
 }
 
+
+
 // how to get equals button to appear?
 
 // decimal function 
@@ -80,3 +85,5 @@ decimal.addEventListener("click", () => {
   
 });
 
+// display value adds a decimal point when the decimal point is clicked
+// it shows the display value plus the decimal 
