@@ -1,6 +1,6 @@
-# nology_calculator
+<h1>JavaScript Calculator</h1>
 
-Skills
+<h2>Skills</h2>
 
 <ul>
 <li>Semanic HTML</li>
@@ -11,12 +11,14 @@ Skills
 <li>Git & GitHub</li>
 </ul>
 
-JavaScript
+<h2>JavaScript</h2>
 
 <ul>
 <li> Functions </li>
 <li>Event Listeners</li>
 </ul>
+
+<h2>Method</h2>
 
 This was my first vanilla JavaScript project on the nology course. 
 
