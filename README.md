@@ -3,7 +3,7 @@
 Skills
 
 <ul>
-<li>HTML</li>
+<li>Semanic HTML</li>
 <li>CSS</li>
 <li>SASS</li>
 <li>BEM</li>
@@ -20,8 +20,9 @@ JavaScript
 
 This was my first vanilla JavaScript project on the nology course. 
 
-I used hard code HTML to create my calculator and JavaScript for it's functionality.
+I used semantic HTML and BEM to create my calculator then JavaScript for it's functionality.
 
-I used event listeners to activate the buttons and functions to calculate.
+I used event listeners to activate the buttons and functions to make the calculator operational. 
+
 
 <img src="./calc_screenshot.png" alt="image of my calculator project">
