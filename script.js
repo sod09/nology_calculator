@@ -8,14 +8,11 @@ const clearBtn = document.querySelector("#clear");
 const equalsBtn = document.querySelector("#equals");
 const decimal = document.querySelector("#decimal");
 
-
-// outputs 
+// outputs
 
 let firstClickNum = "";
 let operator;
-let displayValue = ""; 
-
-
+let displayValue = "";
 
 // display
 
@@ -29,12 +26,12 @@ clearBtn.addEventListener("click", () => {
 
 numBtn.forEach(function (i) {
   i.addEventListener("click", function () {
-    displayValue =  displayValue + i.innerHTML;
+    displayValue = displayValue + i.innerHTML;
     calcDisplay.innerHTML = displayValue;
   });
 });
 
-// the display value here gives you the display value plus the numbers selected after 
+// the display value here gives you the display value plus the numbers selected after
 
 opBtn.forEach(function (i) {
   i.addEventListener("click", function () {
@@ -45,45 +42,35 @@ opBtn.forEach(function (i) {
   });
 });
 
-// display value resets back to "" when the operator button is clicked so that the numbers do not concatenate  
+// display value resets back to "" when the operator button is clicked so that the numbers do not concatenate
 
-
-// calculator function 
+// calculator function
 
 equalsBtn.addEventListener("click", calculator);
 
 function calculator() {
-  
   console.log(operator);
   if (operator === "+") {
     calcDisplay.innerHTML =
-    parseFloat(firstClickNum) + parseFloat(calcDisplay.innerHTML);
+      parseFloat(firstClickNum) + parseFloat(calcDisplay.innerHTML);
   } else if (operator === "-") {
     calcDisplay.innerHTML =
-    parseFloat(firstClickNum) - parseFloat(calcDisplay.innerHTML);
+      parseFloat(firstClickNum) - parseFloat(calcDisplay.innerHTML);
   } else if (operator === "/") {
     calcDisplay.innerHTML =
-    parseFloat(firstClickNum) / parseFloat(calcDisplay.innerHTML);
+      parseFloat(firstClickNum) / parseFloat(calcDisplay.innerHTML);
   } else if (operator === "*") {
     calcDisplay.innerHTML =
-    parseFloat(firstClickNum) * parseFloat(calcDisplay.innerHTML);
+      parseFloat(firstClickNum) * parseFloat(calcDisplay.innerHTML);
   }
 }
 
-
-
-// how to get equals button to appear?
-
-// decimal function 
+// decimal function
 
 decimal.addEventListener("click", () => {
   displayValue = displayValue + ".";
   calcDisplay.innerHTML = displayValue;
-  // if (!firstClickNum.includes(".")) {
-  //   firstClickNum += ".";
-  //   calcDisplay(calculator);
-  
 });
 
 // display value adds a decimal point when the decimal point is clicked
-// it shows the display value plus the decimal 
+// it shows the display value plus the decimal
